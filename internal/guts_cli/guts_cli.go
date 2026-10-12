@@ -8,7 +8,7 @@ import (
 	"io"
 	"os"
 
-	"go.etcd.io/bbolt/internal/common"
+	"github.com/zxysilent/bbolt/internal/common"
 )
 
 var (

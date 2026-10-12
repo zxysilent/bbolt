@@ -3,8 +3,8 @@ package bbolt
 import (
 	"testing"
 
-	"go.etcd.io/bbolt/internal/common"
-	"go.etcd.io/bbolt/internal/freelist"
+	"github.com/zxysilent/bbolt/internal/common"
+	"github.com/zxysilent/bbolt/internal/freelist"
 )
 
 func TestTx_allocatePageStats(t *testing.T) {

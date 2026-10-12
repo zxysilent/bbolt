@@ -1,4 +1,4 @@
-module go.etcd.io/bbolt
+module github.com/zxysilent/bbolt
 
 go 1.26.0
 

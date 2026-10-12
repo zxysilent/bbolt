@@ -1,10 +1,10 @@
 bbolt
 =====
 
-[![Go Report Card](https://goreportcard.com/badge/go.etcd.io/bbolt?style=flat-square)](https://goreportcard.com/report/go.etcd.io/bbolt)
-[![Go Reference](https://pkg.go.dev/badge/go.etcd.io/bbolt.svg)](https://pkg.go.dev/go.etcd.io/bbolt)
-[![Releases](https://img.shields.io/github/release/etcd-io/bbolt/all.svg?style=flat-square)](https://github.com/etcd-io/bbolt/releases)
-[![LICENSE](https://img.shields.io/github/license/etcd-io/bbolt.svg?style=flat-square)](https://github.com/etcd-io/bbolt/blob/master/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/zxysilent/bbolt?style=flat-square)](https://goreportcard.com/report/github.com/zxysilent/bbolt)
+[![Go Reference](https://pkg.go.dev/badge/github.com/zxysilent/bbolt.svg)](https://pkg.go.dev/github.com/zxysilent/bbolt)
+[![Releases](https://img.shields.io/github/release/zxysilent/bbolt/all.svg?style=flat-square)](https://github.com/zxysilent/bbolt/releases)
+[![LICENSE](https://img.shields.io/github/license/zxysilent/bbolt.svg?style=flat-square)](https://github.com/zxysilent/bbolt/blob/main/LICENSE)
 
 bbolt is a fork of [Ben Johnson's][gh_ben] [Bolt][bolt] key/value
 store. The purpose of this fork is to provide the Go community with an active
@@ -78,21 +78,21 @@ New minor versions may add additional features to the API.
 
 To start using `bbolt`, install Go and run `go get`:
 ```sh
-$ go get go.etcd.io/bbolt@latest
+$ go get github.com/zxysilent/bbolt@latest
 ```
 
 This will retrieve the library and update your `go.mod` and `go.sum` files.
 
 To run the command line utility, execute:
 ```sh
-$ go run go.etcd.io/bbolt/cmd/bbolt@latest
+$ go run github.com/zxysilent/bbolt/cmd/bbolt@latest
 ```
 
 Run `go install` to install the `bbolt` command line utility into
 your `$GOBIN` path, which defaults to `$GOPATH/bin` or `$HOME/go/bin` if the
 `GOPATH` environment variable is not set.
 ```sh
-$ go install go.etcd.io/bbolt/cmd/bbolt@latest
+$ go install github.com/zxysilent/bbolt/cmd/bbolt@latest
 ```
 
 ### Importing bbolt
@@ -100,7 +100,7 @@ $ go install go.etcd.io/bbolt/cmd/bbolt@latest
 To use bbolt as an embedded key-value store, import as:
 
 ```go
-import bolt "go.etcd.io/bbolt"
+import bolt "github.com/zxysilent/bbolt"
 
 db, err := bolt.Open(path, 0600, nil)
 if err != nil {
@@ -123,7 +123,7 @@ package main
 import (
 	"log"
 
-	bolt "go.etcd.io/bbolt"
+	bolt "github.com/zxysilent/bbolt"
 )
 
 func main() {
@@ -464,7 +464,7 @@ key and the cursor still points to the first element if present.
 If you remove key/value pairs during iteration, the cursor may automatically
 move to the next position if present in current node each time removing a key.
 When you call `c.Next()` after removing a key, it may skip one key/value pair.
-Refer to [pull/611](https://github.com/etcd-io/bbolt/pull/611) to get more detailed info.
+Refer to [pull/611](https://github.com/zxysilent/bbolt/pull/611) to get more detailed info.
 
 During iteration, if the key is non-`nil` but the value is `nil`, that means
 the key refers to a bucket rather than a value.  Use `Bucket.Bucket()` to
@@ -608,7 +608,7 @@ this from a read-only transaction, it will perform a hot backup and not block
 your other database reads and writes.
 
 By default, it will use a regular file handle which will utilize the operating
-system's page cache. See the [`Tx`](https://godoc.org/go.etcd.io/bbolt#Tx)
+system's page cache. See the [`Tx`](https://godoc.org/github.com/zxysilent/bbolt#Tx)
 documentation for information about optimizing for larger-than-RAM datasets.
 
 One common use case is to backup over HTTP so you can use tools like `cURL` to
@@ -896,7 +896,7 @@ Here are a few things to note when evaluating and using Bolt:
   cursor may not work properly. Each time when removing a key/value pair, the
   cursor may automatically move to the next position if present. When users
   call `c.Next()` after removing a key, it may skip one key/value pair.
-  Refer to https://github.com/etcd-io/bbolt/pull/611 for more detailed info.
+  Refer to https://github.com/zxysilent/bbolt/pull/611 for more detailed info.
 
 * Bolt db can be corrupted during the initialization phase due to abrupt power failure.
   - Please note: This issue can only be reproduced during the very first initialization phase, when there is
@@ -972,10 +972,10 @@ them via pull request.
     * [5.15.27 stable backport](https://lore.kernel.org/stable/20220307091703.544901888@linuxfoundation.org/)
   * [ext4 updates for 5.17](https://lore.kernel.org/lkml/YdyxjTFaLWif6BCM@mit.edu/)
 
-  Please also refer to the discussion in https://github.com/etcd-io/bbolt/issues/562.
+  Please also refer to the discussion in https://github.com/zxysilent/bbolt/issues/562.
 
 - Writing a value with a length of 0 will always result in reading back an empty `[]byte{}` value.
-  Please refer to [issues/726#issuecomment-2061694802](https://github.com/etcd-io/bbolt/issues/726#issuecomment-2061694802).
+  Please refer to [issues/726#issuecomment-2061694802](https://github.com/zxysilent/bbolt/issues/726#issuecomment-2061694802).
 
 ## Other Projects Using Bolt
 

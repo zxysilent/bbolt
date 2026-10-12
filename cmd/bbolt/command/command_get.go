@@ -6,8 +6,8 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	bolt "go.etcd.io/bbolt"
-	"go.etcd.io/bbolt/errors"
+	bolt "github.com/zxysilent/bbolt"
+	"github.com/zxysilent/bbolt/errors"
 )
 
 type getOptions struct {

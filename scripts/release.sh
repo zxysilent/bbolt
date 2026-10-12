@@ -35,7 +35,7 @@ function main {
   MINOR_VERSION=$(echo "${RELEASE_VERSION}" | cut -d. -f 1-2)
   RELEASE_BRANCH="release-${MINOR_VERSION}"
 
-  REPOSITORY=${REPOSITORY:-"git@github.com:etcd-io/bbolt.git"}
+  REPOSITORY=${REPOSITORY:-"git@github.com:zxysilent/bbolt.git"}
 
   local remote_tag_exists
   remote_tag_exists=$(git ls-remote "${REPOSITORY}" "refs/tags/${VERSION}" | grep -c "${VERSION}" || true)

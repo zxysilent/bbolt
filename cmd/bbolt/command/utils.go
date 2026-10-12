@@ -10,8 +10,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	bolt "go.etcd.io/bbolt"
-	berrors "go.etcd.io/bbolt/errors"
+	bolt "github.com/zxysilent/bbolt"
+	berrors "github.com/zxysilent/bbolt/errors"
 )
 
 func checkSourceDBPath(srcPath string) (os.FileInfo, error) {

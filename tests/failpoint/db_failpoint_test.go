@@ -8,13 +8,13 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-
-	bolt "go.etcd.io/bbolt"
-	"go.etcd.io/bbolt/errors"
-	"go.etcd.io/bbolt/internal/btesting"
-	"go.etcd.io/bbolt/internal/common"
-	"go.etcd.io/bbolt/internal/guts_cli"
 	gofail "go.etcd.io/gofail/runtime"
+
+	bolt "github.com/zxysilent/bbolt"
+	"github.com/zxysilent/bbolt/errors"
+	"github.com/zxysilent/bbolt/internal/btesting"
+	"github.com/zxysilent/bbolt/internal/common"
+	"github.com/zxysilent/bbolt/internal/guts_cli"
 )
 
 func TestFailpoint_MapFail(t *testing.T) {

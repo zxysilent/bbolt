@@ -3,7 +3,7 @@ package command
 import (
 	"github.com/spf13/cobra"
 
-	"go.etcd.io/bbolt/version"
+	"github.com/zxysilent/bbolt/version"
 )
 
 const (

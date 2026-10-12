@@ -4,7 +4,7 @@ import (
 	"math/rand/v2"
 	"testing"
 
-	"go.etcd.io/bbolt/internal/common"
+	"github.com/zxysilent/bbolt/internal/common"
 )
 
 func BenchmarkFastCheck(b *testing.B) {

@@ -7,7 +7,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	bolt "go.etcd.io/bbolt"
+	bolt "github.com/zxysilent/bbolt"
 )
 
 func newStatsCommand() *cobra.Command {
@@ -42,9 +42,9 @@ The following errors can be reported:
         The page type is not "meta", "leaf", "branch", or "freelist".
 
 No errors should occur in your database. However, if for some reason you
-experience corruption, please submit a ticket to the etcd-io/bbolt project page:
+experience corruption, please submit a ticket to the bbolt project page:
 
-  https://github.com/etcd-io/bbolt/issues
+  https://github.com/zxysilent/bbolt/issues
 `, "\n"),
 		Args: cobra.RangeArgs(1, 2),
 		RunE: func(cmd *cobra.Command, args []string) error {

@@ -7,10 +7,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"go.etcd.io/bbolt"
-	"go.etcd.io/bbolt/internal/btesting"
-	"go.etcd.io/bbolt/internal/common"
-	"go.etcd.io/bbolt/internal/guts_cli"
+	"github.com/zxysilent/bbolt"
+	"github.com/zxysilent/bbolt/internal/btesting"
+	"github.com/zxysilent/bbolt/internal/common"
+	"github.com/zxysilent/bbolt/internal/guts_cli"
 )
 
 func TestTx_Check_CorruptPage(t *testing.T) {

@@ -8,7 +8,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"go.etcd.io/bbolt/internal/guts_cli"
+	"github.com/zxysilent/bbolt/internal/guts_cli"
 )
 
 func newDumpCommand() *cobra.Command {

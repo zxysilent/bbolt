@@ -1,6 +1,6 @@
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 COMMIT=`git rev-parse --short HEAD`
-GOLDFLAGS="-X go.etcd.io/bbolt/version.Branch=$(BRANCH) -X go.etcd.io/bbolt/version.Commit=$(COMMIT)"
+GOLDFLAGS="-X github.com/zxysilent/bbolt/version.Branch=$(BRANCH) -X github.com/zxysilent/bbolt/version.Commit=$(COMMIT)"
 GOFILES = $(shell find . -name \*.go)
 REPOSITORY_ROOT := $(shell git rev-parse --show-toplevel)
 GOTOOLCHAIN ?= go$(shell cat $(REPOSITORY_ROOT)/.go-version)

@@ -6,7 +6,7 @@ import (
 	"io"
 	"unsafe"
 
-	"go.etcd.io/bbolt/errors"
+	"github.com/zxysilent/bbolt/errors"
 )
 
 type Meta struct {
